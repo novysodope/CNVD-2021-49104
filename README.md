@@ -3,4 +3,5 @@
 ```bash
 python CNVD-2021-49104.py
 ```
-<img width="885" alt="微信图片_20211129120055" src="https://user-images.githubusercontent.com/45167857/143806822-a7b62243-1cb2-4b71-a153-61578d498679.png">
+
+<img width="766" alt="微信图片_20211129121838" src="https://user-images.githubusercontent.com/45167857/143808453-f1e1900e-3d55-4a2d-bd07-29755271f658.png">
