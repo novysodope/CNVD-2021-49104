@@ -1,5 +1,5 @@
 # CNVD-2021-49104
-泛微E-Office文件上传漏洞POC
+泛微E-Office9文件上传漏洞POC
 ```bash
 python CNVD-2021-49104.py
 ```
